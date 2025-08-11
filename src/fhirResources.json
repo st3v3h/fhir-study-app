@@ -12,16 +12,142 @@
         "subCategory": "Individuals"
     },
     {
+        "name": "PractitionerRole",
+        "definition": "A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time.",
+        "category": "Base",
+        "subCategory": "Individuals"
+    },
+    {
+        "name": "RelatedPerson",
+        "definition": "Information about a person that is involved in the care for a patient, but who is not the target of care themselves.",
+        "category": "Base",
+        "subCategory": "Individuals"
+    },
+    {
+        "name": "Person",
+        "definition": "Demographics and administrative information about a person independent of a specific health-related context.",
+        "category": "Base",
+        "subCategory": "Individuals"
+    },
+    {
+        "name": "Group",
+        "definition": "Represents a defined collection of individuals, devices, or other entities.",
+        "category": "Base",
+        "subCategory": "Individuals"
+    },
+    {
         "name": "Organization",
         "definition": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.",
         "category": "Base",
         "subCategory": "Entities"
     },
     {
-        "name": "Observation",
-        "definition": "Measurements and simple assertions made about a patient, device, or other subject.",
-        "category": "Clinical",
-        "subCategory": "Diagnostics"
+        "name": "OrganizationAffiliation",
+        "definition": "Defines an affiliation/assotiation/relationship between 2 organizations, that is not a part-of relationship.",
+        "category": "Base",
+        "subCategory": "Entities"
+    },
+    {
+        "name": "HealthcareService",
+        "definition": "The details of a healthcare service available at a location.",
+        "category": "Base",
+        "subCategory": "Entities"
+    },
+    {
+        "name": "Endpoint",
+        "definition": "The technical details of an endpoint that can be used for electronic services.",
+        "category": "Base",
+        "subCategory": "Entities"
+    },
+    {
+        "name": "Location",
+        "definition": "Details and position information for a physical place.",
+        "category": "Base",
+        "subCategory": "Entities"
+    },
+    {
+        "name": "Substance",
+        "definition": "A homogeneous material with a definite composition.",
+        "category": "Base",
+        "subCategory": "Entities"
+    },
+    {
+        "name": "BiologicallyDerivedProduct",
+        "definition": "A material substance originating from a biological entity.",
+        "category": "Base",
+        "subCategory": "Entities"
+    },
+    {
+        "name": "Device",
+        "definition": "A type of item that is used in the provision of healthcare without being substantially changed through that activity.",
+        "category": "Base",
+        "subCategory": "Entities"
+    },
+    {
+        "name": "DeviceMetric",
+        "definition": "Describes a measurement, calculation or setting capability of a medical device.",
+        "category": "Base",
+        "subCategory": "Entities"
+    },
+    {
+        "name": "Task",
+        "definition": "A task to be performed.",
+        "category": "Base",
+        "subCategory": "Workflow"
+    },
+    {
+        "name": "Appointment",
+        "definition": "A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s).",
+        "category": "Base",
+        "subCategory": "Workflow"
+    },
+    {
+        "name": "AppointmentResponse",
+        "definition": "A reply to an appointment request for a patient and/or practitioner(s), such as a confirmation or rejection.",
+        "category": "Base",
+        "subCategory": "Workflow"
+    },
+    {
+        "name": "Schedule",
+        "definition": "A container for slots of time that may be available for booking appointments.",
+        "category": "Base",
+        "subCategory": "Workflow"
+    },
+    {
+        "name": "Slot",
+        "definition": "A slot of time on a schedule that may be available for booking appointments.",
+        "category": "Base",
+        "subCategory": "Workflow"
+    },
+    {
+        "name": "VerificationResult",
+        "definition": "Describes the result of verifying the existence of and connectivity to a FHIR net-work.",
+        "category": "Base",
+        "subCategory": "Workflow"
+    },
+    {
+        "name": "Contract",
+        "definition": "A formal agreement between parties.",
+        "category": "Base",
+        "subCategory": "Management"
+    },
+    {
+        "name": "Account",
+        "definition": "Tracks balance, charges, credits, and transfers.",
+        "category": "Base",
+        "subCategory": "Management"
+    },
+    {
+        "name": "Invoice",
+        "definition": "A request for payment for goods and services rendered.",
+        "category": "Base",
+        "subCategory": "Management"
+    },
+    {
+        "name": "ChargeItemDefinition",
+        "definition": "The properties of a billing code to be used in charge item resources.",
+        "category": "Base",
+        "subCategory": "Management"
     },
     {
         "name": "Encounter",
@@ -30,8 +156,272 @@
         "subCategory": "Summary"
     },
     {
+        "name": "EpisodeOfCare",
+        "definition": "An association between a patient and an organization / healthcare provider(s) during which time encounters may occur.",
+        "category": "Clinical",
+        "subCategory": "Summary"
+    },
+    {
+        "name": "Flag",
+        "definition": "A warning that is relevant to the care of a patient.",
+        "category": "Clinical",
+        "subCategory": "Summary"
+    },
+    {
+        "name": "List",
+        "definition": "A curated collection of resources.",
+        "category": "Clinical",
+        "subCategory": "Summary"
+    },
+    {
+        "name": "Library",
+        "definition": "Represents a library of quality improvement components.",
+        "category": "Clinical",
+        "subCategory": "Summary"
+    },
+    {
+        "name": "Composition",
+        "definition": "A set of resources composed into a single coherent clinical statement, such as a discharge summary.",
+        "category": "Clinical",
+        "subCategory": "Summary"
+    },
+    {
+        "name": "DocumentReference",
+        "definition": "A reference to a document of any kind for any purpose. Provides metadata about the document.",
+        "category": "Clinical",
+        "subCategory": "Summary"
+    },
+    {
+        "name": "DocumentManifest",
+        "definition": "A list of documents that are related to each other, and which maybe treated as a whole.",
+        "category": "Clinical",
+        "subCategory": "Summary"
+    },
+    {
+        "name": "CatalogEntry",
+        "definition": "An entry in a catalog.",
+        "category": "Clinical",
+        "subCategory": "Summary"
+    },
+    {
+        "name": "AllergyIntolerance",
+        "definition": "Risk of harmful reaction to a substance.",
+        "category": "Clinical",
+        "subCategory": "Care Provision"
+    },
+    {
+        "name": "AdverseEvent",
+        "definition": "An event resulting in unintended harm to a patient or another person.",
+        "category": "Clinical",
+        "subCategory": "Care Provision"
+    },
+    {
+        "name": "Condition",
+        "definition": "A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.",
+        "category": "Clinical",
+        "subCategory": "Care Provision"
+    },
+    {
+        "name": "Procedure",
+        "definition": "An action that is or was performed on or for a patient. This can be a physical intervention like a surgery, or less invasive like providing counseling.",
+        "category": "Clinical",
+        "subCategory": "Care Provision"
+    },
+    {
+        "name": "FamilyMemberHistory",
+        "definition": "Significant health conditions for a person's family members.",
+        "category": "Clinical",
+        "subCategory": "Care Provision"
+    },
+    {
+        "name": "ClinicalImpression",
+        "definition": "A record of a clinical assessment performed to determine what problem(s) may affect the patient.",
+        "category": "Clinical",
+        "subCategory": "Care Provision"
+    },
+    {
+        "name": "DetectedIssue",
+        "definition": "Identifies and records issues that have been detected.",
+        "category": "Clinical",
+        "subCategory": "Care Provision"
+    },
+    {
+        "name": "CarePlan",
+        "definition": "A plan of care for a patient.",
+        "category": "Clinical",
+        "subCategory": "Request & Response"
+    },
+    {
+        "name": "CareTeam",
+        "definition": "The people and organizations who are involved in the care of a patient.",
+        "category": "Clinical",
+        "subCategory": "Request & Response"
+    },
+    {
+        "name": "Goal",
+        "definition": "A desired outcome for a patient.",
+        "category": "Clinical",
+        "subCategory": "Request & Response"
+    },
+    {
+        "name": "ServiceRequest",
+        "definition": "A request for a service to be performed.",
+        "category": "Clinical",
+        "subCategory": "Request & Response"
+    },
+    {
+        "name": "NutritionOrder",
+        "definition": "A request to supply a diet, formula, or nutritional supplement to a patient.",
+        "category": "Clinical",
+        "subCategory": "Request & Response"
+    },
+    {
+        "name": "VisionPrescription",
+        "definition": "A prescription for glasses or contact lenses.",
+        "category": "Clinical",
+        "subCategory": "Request & Response"
+    },
+    {
+        "name": "RiskAssessment",
+        "definition": "An assessment of the potential risk of future harm to a patient.",
+        "category": "Clinical",
+        "subCategory": "Request & Response"
+    },
+    {
+        "name": "RequestGroup",
+        "definition": "A group of related requests.",
+        "category": "Clinical",
+        "subCategory": "Request & Response"
+    },
+    {
+        "name": "Communication",
+        "definition": "A record of a request for information or an action.",
+        "category": "Clinical",
+        "subCategory": "Request & Response"
+    },
+    {
+        "name": "CommunicationRequest",
+        "definition": "A request to convey information.",
+        "category": "Clinical",
+        "subCategory": "Request & Response"
+    },
+    {
+        "name": "DeviceRequest",
+        "definition": "A request for a patient to use or be given a device.",
+        "category": "Clinical",
+        "subCategory": "Request & Response"
+    },
+    {
+        "name": "DeviceUseStatement",
+        "definition": "A record of a device being used by a patient.",
+        "category": "Clinical",
+        "subCategory": "Request & Response"
+    },
+    {
+        "name": "GuidanceResponse",
+        "definition": "The result of a guidance request.",
+        "category": "Clinical",
+        "subCategory": "Request & Response"
+    },
+    {
+        "name": "Observation",
+        "definition": "Measurements and simple assertions made about a patient, device, or other subject.",
+        "category": "Clinical",
+        "subCategory": "Diagnostics"
+    },
+    {
+        "name": "Media",
+        "definition": "A photo, video, or audio recording.",
+        "category": "Clinical",
+        "subCategory": "Diagnostics"
+    },
+    {
+        "name": "DiagnosticReport",
+        "definition": "A summary of the results of a diagnostic service.",
+        "category": "Clinical",
+        "subCategory": "Diagnostics"
+    },
+    {
+        "name": "Specimen",
+        "definition": "A sample of tissue or fluid taken from a patient.",
+        "category": "Clinical",
+        "subCategory": "Diagnostics"
+    },
+    {
+        "name": "BodyStructure",
+        "definition": "Record of an anatomical structure.",
+        "category": "Clinical",
+        "subCategory": "Diagnostics"
+    },
+    {
+        "name": "ImagingStudy",
+        "definition": "A set of images produced in single study.",
+        "category": "Clinical",
+        "subCategory": "Diagnostics"
+    },
+    {
+        "name": "QuestionnaireResponse",
+        "definition": "A structured set of questions and answers.",
+        "category": "Clinical",
+        "subCategory": "Diagnostics"
+    },
+    {
+        "name": "MolecularSequence",
+        "definition": "A sequence of nucleotides or amino acids.",
+        "category": "Clinical",
+        "subCategory": "Diagnostics"
+    },
+    {
+        "name": "Medication",
+        "definition": "Definition of a medication.",
+        "category": "Clinical",
+        "subCategory": "Medications"
+    },
+    {
+        "name": "MedicationAdministration",
+        "definition": "A record of a medication being administered to a patient.",
+        "category": "Clinical",
+        "subCategory": "Medications"
+    },
+    {
+        "name": "MedicationDispense",
+        "definition": "A record of a medication being dispensed to a patient.",
+        "category": "Clinical",
+        "subCategory": "Medications"
+    },
+    {
+        "name": "MedicationKnowledge",
+        "definition": "Definition of a medication including its form, strength, and packaging.",
+        "category": "Clinical",
+        "subCategory": "Medications"
+    },
+    {
         "name": "MedicationRequest",
         "definition": "An order or request for both supply of the medication and the instructions for administration of the medication to a patient.",
+        "category": "Clinical",
+        "subCategory": "Medications"
+    },
+    {
+        "name": "MedicationStatement",
+        "definition": "A record of a medication that is being taken by a patient.",
+        "category": "Clinical",
+        "subCategory": "Medications"
+    },
+    {
+        "name": "Immunization",
+        "definition": "A record of an immunization event.",
+        "category": "Clinical",
+        "subCategory": "Medications"
+    },
+    {
+        "name": "ImmunizationEvaluation",
+        "definition": "A record of an evaluation of an immunization event.",
+        "category": "Clinical",
+        "subCategory": "Medications"
+    },
+    {
+        "name": "ImmunizationRecommendation",
+        "definition": "A recommendation for an immunization.",
         "category": "Clinical",
         "subCategory": "Medications"
     },
@@ -42,33 +432,387 @@
         "subCategory": "Billing"
     },
     {
+        "name": "ClaimResponse",
+        "definition": "A response to a claim.",
+        "category": "Financial",
+        "subCategory": "Billing"
+    },
+    {
+        "name": "ChargeItem",
+        "definition": "A record of a charge for a good or service.",
+        "category": "Financial",
+        "subCategory": "Billing"
+    },
+    {
         "name": "Coverage",
         "definition": "Financial instrument which may be used to reimburse or pay for health care products and services.",
         "category": "Financial",
         "subCategory": "Support"
     },
     {
+        "name": "CoverageEligibilityRequest",
+        "definition": "A request to determine if a patient is eligible for coverage.",
+        "category": "Financial",
+        "subCategory": "Support"
+    },
+    {
+        "name": "CoverageEligibilityResponse",
+        "definition": "A response to a request to determine if a patient is eligible for coverage.",
+        "category": "Financial",
+        "subCategory": "Support"
+    },
+    {
+        "name": "EnrollmentRequest",
+        "definition": "A request to enroll a patient in a health plan.",
+        "category": "Financial",
+        "subCategory": "Support"
+    },
+    {
+        "name": "EnrollmentResponse",
+        "definition": "A response to a request to enroll a patient in a health plan.",
+        "category": "Financial",
+        "subCategory": "Support"
+    },
+    {
+        "name": "PaymentNotice",
+        "definition": "A notice of a payment.",
+        "category": "Financial",
+        "subCategory": "Payment"
+    },
+    {
+        "name": "PaymentReconciliation",
+        "definition": "A record of a payment reconciliation.",
+        "category": "Financial",
+        "subCategory": "Payment"
+    },
+    {
+        "name": "ExplanationOfBenefit",
+        "definition": "An explanation of a benefit.",
+        "category": "Financial",
+        "subCategory": "Payment"
+    },
+    {
+        "name": "InsurancePlan",
+        "definition": "Details of a health insurance product/plan.",
+        "category": "Financial",
+        "subCategory": "Other"
+    },
+    {
         "name": "ResearchStudy",
         "definition": "A process of investigation that involves subjects and which is designed to answer a scientific question.",
         "category": "Specialized",
-        "subCategory": "Research"
+        "subCategory": "Public Health & Research"
     },
     {
-        "name": "Device",
-        "definition": "A type of item that is used in the provision of healthcare without being substantially changed through that activity.",
-        "category": "Base",
-        "subCategory": "Entities"
+        "name": "ResearchSubject",
+        "definition": "A person or animal that is the subject of a research study.",
+        "category": "Specialized",
+        "subCategory": "Public Health & Research"
     },
     {
-        "name": "Condition",
-        "definition": "A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.",
-        "category": "Clinical",
-        "subCategory": "Summary"
+        "name": "Measure",
+        "definition": "A quality measure.",
+        "category": "Specialized",
+        "subCategory": "Quality, Reporting & Testing"
     },
     {
-        "name": "Procedure",
-        "definition": "An action that is or was performed on or for a patient. This can be a physical intervention like a surgery, or less invasive like providing counseling.",
-        "category": "Clinical",
-        "subCategory": "Summary"
+        "name": "MeasureReport",
+        "definition": "A report of a quality measure.",
+        "category": "Specialized",
+        "subCategory": "Quality, Reporting & Testing"
+    },
+    {
+        "name": "TestScript",
+        "definition": "A set of instructions for testing a system.",
+        "category": "Specialized",
+        "subCategory": "Quality, Reporting & Testing"
+    },
+    {
+        "name": "TestReport",
+        "definition": "A report of a test.",
+        "category": "Specialized",
+        "subCategory": "Quality, Reporting & Testing"
+    },
+    {
+        "name": "MedicinalProduct",
+        "definition": "Detailed information for a medicinal product.",
+        "category": "Specialized",
+        "subCategory": "Medication Definition"
+    },
+    {
+        "name": "MedicinalProductAuthorization",
+        "definition": "The regulatory authorization of a medicinal product.",
+        "category": "Specialized",
+        "subCategory": "Medication Definition"
+    },
+    {
+        "name": "MedicinalProductContraindication",
+        "definition": "The clinical particulars - contraindications.",
+        "category": "Specialized",
+        "subCategory": "Medication Definition"
+    },
+    {
+        "name": "MedicinalProductIndication",
+        "definition": "The clinical particulars - indications.",
+        "category": "Specialized",
+        "subCategory": "Medication Definition"
+    },
+    {
+        "name": "MedicinalProductInteraction",
+        "definition": "The clinical particulars - interactions.",
+        "category": "Specialized",
+        "subCategory": "Medication Definition"
+    },
+    {
+        "name": "MedicinalProductManufactured",
+        "definition": "The manufactured item as contained in the packaged medicinal product.",
+        "category": "Specialized",
+        "subCategory": "Medication Definition"
+    },
+    {
+        "name": "MedicinalProductPackaged",
+        "definition": "A medicinal product in a container or package.",
+        "category": "Specialized",
+        "subCategory": "Medication Definition"
+    },
+    {
+        "name": "MedicinalProductPharmaceutical",
+        "definition": "A pharmaceutical product described in terms of its composition and dose form.",
+        "category": "Specialized",
+        "subCategory": "Medication Definition"
+    },
+    {
+        "name": "MedicinalProductUndesirableEffect",
+        "definition": "The clinical particulars - undesirable effects.",
+        "category": "Specialized",
+        "subCategory": "Medication Definition"
+    },
+    {
+        "name": "SubstanceNucleicAcid",
+        "definition": "Nucleic acids are defined by three distinct elements: the base, sugar and linkage.",
+        "category": "Specialized",
+        "subCategory": "Substance Definition"
+    },
+    {
+        "name": "SubstancePolymer",
+        "definition": "Properties of a substance polymer.",
+        "category": "Specialized",
+        "subCategory": "Substance Definition"
+    },
+    {
+        "name": "SubstanceProtein",
+        "definition": "A substance protein.",
+        "category": "Specialized",
+        "subCategory": "Substance Definition"
+    },
+    {
+        "name": "SubstanceReferenceInformation",
+        "definition": "Todo.",
+        "category": "Specialized",
+        "subCategory": "Substance Definition"
+    },
+    {
+        "name": "SubstanceSourceMaterial",
+        "definition": "Source material for a substance.",
+        "category": "Specialized",
+        "subCategory": "Substance Definition"
+    },
+    {
+        "name": "SubstanceSpecification",
+        "definition": "The specification of a substance.",
+        "category": "Specialized",
+        "subCategory": "Substance Definition"
+    },
+    {
+        "name": "AuditEvent",
+        "definition": "A record of an event for purposes of security analysis.",
+        "category": "Foundation",
+        "subCategory": "Security"
+    },
+    {
+        "name": "Consent",
+        "definition": "A record of a patient's consent.",
+        "category": "Foundation",
+        "subCategory": "Security"
+    },
+    {
+        "name": "Provenance",
+        "definition": "A record of the origin of a resource.",
+        "category": "Foundation",
+        "subCategory": "Security"
+    },
+    {
+        "name": "CapabilityStatement",
+        "definition": "A statement of the capabilities of a FHIR server.",
+        "category": "Foundation",
+        "subCategory": "Conformance"
+    },
+    {
+        "name": "StructureDefinition",
+        "definition": "A definition of a FHIR structure.",
+        "category": "Foundation",
+        "subCategory": "Conformance"
+    },
+    {
+        "name": "ImplementationGuide",
+        "definition": "A set of rules about how FHIR resources are used.",
+        "category": "Foundation",
+        "subCategory": "Conformance"
+    },
+    {
+        "name": "SearchParameter",
+        "definition": "A search parameter that can be used to search for resources.",
+        "category": "Foundation",
+        "subCategory": "Conformance"
+    },
+    {
+        "name": "MessageDefinition",
+        "definition": "A definition of a message that can be exchanged between systems.",
+        "category": "Foundation",
+        "subCategory": "Conformance"
+    },
+    {
+        "name": "OperationDefinition",
+        "definition": "A definition of an operation that can be performed on a resource.",
+        "category": "Foundation",
+        "subCategory": "Conformance"
+    },
+    {
+        "name": "CompartmentDefinition",
+        "definition": "A definition of a compartment.",
+        "category": "Foundation",
+        "subCategory": "Conformance"
+    },
+    {
+        "name": "StructureMap",
+        "definition": "A map from one set of structures to another.",
+        "category": "Foundation",
+        "subCategory": "Conformance"
+    },
+    {
+        "name": "GraphDefinition",
+        "definition": "A formal computable definition of a graph of resources.",
+        "category": "Foundation",
+        "subCategory": "Conformance"
+    },
+    {
+        "name": "ExampleScenario",
+        "definition": "An example of a FHIR message exchange.",
+        "category": "Foundation",
+        "subCategory": "Conformance"
+    },
+    {
+        "name": "CodeSystem",
+        "definition": "A set of codes that can be used in a FHIR resource.",
+        "category": "Foundation",
+        "subCategory": "Terminology"
+    },
+    {
+        "name": "ValueSet",
+        "definition": "A set of codes that can be used in a FHIR resource.",
+        "category": "Foundation",
+        "subCategory": "Terminology"
+    },
+    {
+        "name": "ConceptMap",
+        "definition": "A map from one set of codes to another.",
+        "category": "Foundation",
+        "subCategory": "Terminology"
+    },
+    {
+        "name": "NamingSystem",
+        "definition": "A system of unique identifiers for resources.",
+        "category": "Foundation",
+        "subCategory": "Terminology"
+    },
+    {
+        "name": "TerminologyCapabilities",
+        "definition": "A statement of the capabilities of a terminology server.",
+        "category": "Foundation",
+        "subCategory": "Terminology"
+    },
+    {
+        "name": "Bundle",
+        "definition": "A container for a collection of resources.",
+        "category": "Foundation",
+        "subCategory": "Other"
+    },
+    {
+        "name": "Binary",
+        "definition": "A resource that contains any kind of data in a binary format.",
+        "category": "Foundation",
+        "subCategory": "Other"
+    },
+    {
+        "name": "Basic",
+        "definition": "A resource that can be used to represent any concept that does not have a defined resource type.",
+        "category": "Foundation",
+        "subCategory": "Other"
+    },
+    {
+        "name": "MessageHeader",
+        "definition": "The header of a message.",
+        "category": "Foundation",
+        "subCategory": "Documents"
+    },
+    {
+        "name": "OperationOutcome",
+        "definition": "The result of an operation.",
+        "category": "Foundation",
+        "subCategory": "Documents"
+    },
+    {
+        "name": "Parameters",
+        "definition": "A resource that contains a set of parameters.",
+        "category": "Foundation",
+        "subCategory": "Documents"
+    },
+    {
+        "name": "Subscription",
+        "definition": "A subscription to a resource.",
+        "category": "Foundation",
+        "subCategory": "Documents"
+    },
+    {
+        "name": "Questionnaire",
+        "definition": "A structured set of questions.",
+        "category": "Foundation",
+        "subCategory": "Definitional Artifacts"
+    },
+    {
+        "name": "PlanDefinition",
+        "definition": "The definition of a plan for a series of actions, independent of any specific patient or context.",
+        "category": "Foundation",
+        "subCategory": "Definitional Artifacts"
+    },
+    {
+        "name": "ActivityDefinition",
+        "definition": "This resource allows for the definition of some activity to be performed, independent of a particular patient, practitioner, or other performance context.",
+        "category": "Foundation",
+        "subCategory": "Definitional Artifacts"
+    },
+    {
+        "name": "DeviceDefinition",
+        "definition": "The characteristics, operational status and capabilities of a medical-related component of a medical device.",
+        "category": "Foundation",
+        "subCategory": "Definitional Artifacts"
+    },
+    {
+        "name": "EventDefinition",
+        "definition": "The EventDefinition resource provides a reusable description of when a particular event can occur.",
+        "category": "Foundation",
+        "subCategory": "Definitional Artifacts"
+    },
+    {
+        "name": "ObservationDefinition",
+        "definition": "Set of definitional characteristics for a kind of observation or measurement produced or consumed by an orderable health care service.",
+        "category": "Foundation",
+        "subCategory": "Definitional Artifacts"
+    },
+    {
+        "name": "SpecimenDefinition",
+        "definition": "A kind of specimen with associated set of requirements.",
+        "category": "Foundation",
+        "subCategory": "Definitional Artifacts"
     }
 ]
