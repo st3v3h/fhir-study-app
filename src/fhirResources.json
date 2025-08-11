@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Patient",
+        "definition": "Demographics and other administrative information about an individual receiving care or other health-related services.",
+        "category": "Base",
+        "subCategory": "Individuals"
+    },
+    {
+        "name": "Practitioner",
+        "definition": "A person who is directly or indirectly involved in the provisioning of healthcare.",
+        "category": "Base",
+        "subCategory": "Individuals"
+    },
+    {
+        "name": "Organization",
+        "definition": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.",
+        "category": "Base",
+        "subCategory": "Entities"
+    },
+    {
+        "name": "Observation",
+        "definition": "Measurements and simple assertions made about a patient, device, or other subject.",
+        "category": "Clinical",
+        "subCategory": "Diagnostics"
+    },
+    {
+        "name": "Encounter",
+        "definition": "An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.",
+        "category": "Clinical",
+        "subCategory": "Summary"
+    },
+    {
+        "name": "MedicationRequest",
+        "definition": "An order or request for both supply of the medication and the instructions for administration of the medication to a patient.",
+        "category": "Clinical",
+        "subCategory": "Medications"
+    },
+    {
+        "name": "Claim",
+        "definition": "A provider's submission of a request for payment to a payer for health care services.",
+        "category": "Financial",
+        "subCategory": "Billing"
+    },
+    {
+        "name": "Coverage",
+        "definition": "Financial instrument which may be used to reimburse or pay for health care products and services.",
+        "category": "Financial",
+        "subCategory": "Support"
+    },
+    {
+        "name": "ResearchStudy",
+        "definition": "A process of investigation that involves subjects and which is designed to answer a scientific question.",
+        "category": "Specialized",
+        "subCategory": "Research"
+    },
+    {
+        "name": "Device",
+        "definition": "A type of item that is used in the provision of healthcare without being substantially changed through that activity.",
+        "category": "Base",
+        "subCategory": "Entities"
+    },
+    {
+        "name": "Condition",
+        "definition": "A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.",
+        "category": "Clinical",
+        "subCategory": "Summary"
+    },
+    {
+        "name": "Procedure",
+        "definition": "An action that is or was performed on or for a patient. This can be a physical intervention like a surgery, or less invasive like providing counseling.",
+        "category": "Clinical",
+        "subCategory": "Summary"
+    }
+]
