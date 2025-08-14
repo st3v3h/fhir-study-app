@@ -37,6 +37,7 @@ const Header = ({ setView }) => (
 const StudySetSelector = ({ onStart, allResources }) => {
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [selectedSubCategory, setSelectedSubCategory] = useState('All');
+    const [selectedMaturity, setSelectedMaturity] = useState('All');
 
     const categories = useMemo(() => ['All', ...new Set(allResources.map(r => r.category))], [allResources]);
     const subCategories = useMemo(() => {
@@ -52,9 +53,22 @@ const StudySetSelector = ({ onStart, allResources }) => {
 
     const handleStart = (mode) => {
         let studySet = allResources;
+
+        // Filter by maturity
+        if (selectedMaturity !== 'All') {
+            const minMaturity = parseInt(selectedMaturity, 10);
+            studySet = studySet.filter(r => {
+                const resourceMaturity = r.maturity === 'N' ? 6 : parseInt(r.maturity, 10);
+                return resourceMaturity >= minMaturity;
+            });
+        }
+
+        // Filter by category
         if (selectedCategory !== 'All') {
             studySet = studySet.filter(r => r.category === selectedCategory);
         }
+        
+        // Filter by sub-category
         if (selectedSubCategory !== 'All') {
             studySet = studySet.filter(r => r.subCategory === selectedSubCategory);
         }
@@ -64,9 +78,22 @@ const StudySetSelector = ({ onStart, allResources }) => {
     return (
         <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Create Your Study Set</h2>
-            <p className="text-gray-600 mb-6">Select a category and sub-category to focus your study session.</p>
+            <p className="text-gray-600 mb-6">Select criteria to focus your study session.</p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                 <div>
+                    <label htmlFor="maturity" className="block text-sm font-medium text-gray-700 mb-1">Maturity Level</label>
+                    <select id="maturity" value={selectedMaturity} onChange={(e) => setSelectedMaturity(e.target.value)} className="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                        <option value="All">All</option>
+                        <option value="0">0+</option>
+                        <option value="1">1+</option>
+                        <option value="2">2+</option>
+                        <option value="3">3+</option>
+                        <option value="4">4+</option>
+                        <option value="5">5</option>
+                        <option value="6">Normative</option>
+                    </select>
+                </div>
                 <div>
                     <label htmlFor="category" className="block text-sm font-medium text-gray-700 mb-1">Category</label>
                     <select id="category" value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
@@ -92,6 +119,18 @@ const StudySetSelector = ({ onStart, allResources }) => {
                 </button>
             </div>
         </div>
+    );
+};
+
+const MaturityBadge = ({ maturity }) => {
+    const isNormative = maturity === 'N';
+    const bgColor = isNormative ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800';
+    const text = isNormative ? 'Normative' : `FMM ${maturity}`;
+
+    return (
+        <span className={`inline-block ml-3 px-2.5 py-1 text-sm font-semibold rounded-full ${bgColor}`}>
+            {text}
+        </span>
     );
 };
 
@@ -134,7 +173,10 @@ const FlashcardMode = ({ studySet, favorites, toggleFavorite }) => {
                 >
                     {/* Front of Card */}
                     <div className="absolute w-full h-full backface-hidden bg-white rounded-lg shadow-xl border border-gray-200 flex flex-col justify-center items-center p-6 cursor-pointer">
-                        <h2 className="text-4xl font-bold text-gray-800 text-center">{currentCard.name}</h2>
+                        <div className="text-center">
+                             <h2 className="text-4xl font-bold text-gray-800">{currentCard.name}</h2>
+                             <MaturityBadge maturity={currentCard.maturity} />
+                        </div>
                         <p className="text-sm text-gray-500 mt-4">(Click to reveal definition)</p>
                     </div>
                     {/* Back of Card */}
@@ -276,7 +318,10 @@ const FavoritesMode = ({ favorites, toggleFavorite, setView }) => {
                 {favorites.map(card => (
                     <div key={card.name} className="bg-white rounded-lg shadow-lg p-5 flex flex-col justify-between">
                         <div>
-                            <h3 className="text-xl font-bold text-gray-800">{card.name}</h3>
+                             <div className="flex justify-between items-start">
+                                <h3 className="text-xl font-bold text-gray-800">{card.name}</h3>
+                                <MaturityBadge maturity={card.maturity} />
+                            </div>
                             <p className="text-gray-600 mt-2">{card.definition}</p>
                         </div>
                         <div className="flex justify-between items-center mt-4">
