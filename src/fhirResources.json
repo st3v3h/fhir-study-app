@@ -638,10 +638,10 @@
   },
   {
     "name": "ResearchElementDefinition",
-    "definition": "\"Describes a \"\"PICO\"\" element that knowledge (evidence",
-    "category": "assertion",
-    "subCategory": "recommendation) is about.\"",
-    "maturity": "Specialized"
+    "definition": "Describes a PICO element that knowledge (evidence, assertion, recommendation) is about.",
+    "category": "Specialized",
+    "subCategory": "Evidence-Based Medicine",
+    "maturity": "0"
   },
   {
     "name": "Evidence",
@@ -652,10 +652,10 @@
   },
   {
     "name": "EvidenceVariable",
-    "definition": "\"Describes a \"\"PICO\"\" element that knowledge (evidence",
-    "category": "assertion",
-    "subCategory": "recommendation) is about.\"",
-    "maturity": "Specialized"
+    "definition": "Describes a PICO element that knowledge (evidence, assertion, recommendation) is about.",
+    "category": "Specialized",
+    "subCategory": "Evidence-Based Medicine",
+    "maturity": "0"
   },
   {
     "name": "EffectEvidenceSynthesis",
